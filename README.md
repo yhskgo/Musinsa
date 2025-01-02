@@ -11,14 +11,17 @@
 * 응답값 : Frontend에서 값 변경없이 아래와 같은 화면을 출력하기 위한 JSON
 * 
 * 테스트 : Postman GET http://localhost:8080/api/musinsa/minprices
+<img width="1037" alt="구현1_postman" src="https://github.com/user-attachments/assets/cbae6b12-d797-48b3-9409-2b4cd5f2b928" />
 
 ### 구현 2) - 단일 브랜드로 모든 카테고리 상품을 구매할 때 최저가격에 판매하는 브랜드와 카테고리의 상품가격, 총액을 조회하는 API
 * 테스트 : Postman GET http://localhost:8080/api/musinsa/minpricebrand
+<img width="1013" alt="구현2_postman" src="https://github.com/user-attachments/assets/c5025770-b01b-46e4-a76c-ae459d095353" />
 
 ### 구현 3) - 카테고리 이름으로 최저, 최고 가격 브랜드와 상품 가격을 조회하는 API
 * 요청값 : 카테고리명 (String)
 * 응답값 
 * 테스트 : http://localhost:8080/api/musinsa/minMaxPrice/상의 
+<img width="1016" alt="구현3_postman" src="https://github.com/user-attachments/assets/bcb1b589-1adc-49e5-a711-963eb2772b0b" />
 
 ### 구현 4) 브랜드 및 상품을 추가 / 업데이트 / 삭제하는 API
 * 요청값- Request Body JSON
@@ -39,6 +42,25 @@
     "socks":80123, 
     "accessory":90123
 }
+
+* 상품생성결과:
+<img width="468" alt="구현4_post_db" src="https://github.com/user-attachments/assets/4f3f23c6-66fa-4167-9364-5baffcb7b847" />
+
+
+
+#### 상품업데이트
+* 테스트 : Postman PUT http://localhost:8080/api/musinsa
+<img width="990" alt="구현4_post" src="https://github.com/user-attachments/assets/510484ae-0782-4e06-b910-325b99cbae42" />
+* 상품업데이트 결과
+<img width="472" alt="구현4_put_update_db" src="https://github.com/user-attachments/assets/f3d9de8c-2a3a-4de6-a282-2674ea3dd9f0" />
+
+#### 상품삭제
+* 테스트 : Postman PUT http://localhost:8080/api/musinsa
+<img width="1020" alt="구현4_del_post" src="https://github.com/user-attachments/assets/eabff303-752a-4ce7-a5a7-f18fb6578a71" />
+
+
+* 상품삭제결과 : 
+  <img width="467" alt="구현4_del_db" src="https://github.com/user-attachments/assets/af666c71-9dff-4635-bc86-6fc2939f82f2" />
 
 이 API는 다음 기능을 포함합니다.
 
