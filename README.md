@@ -2,26 +2,43 @@
 # 무신사 상품 API
 
 이 프로젝트는 Spring Boot, JPA, H2 데이터베이스를 사용하여 무신사 상품 데이터를 관리하는 RESTful API를 제공합니다. 이 API는 상품 정보의 생성, 수정 및 삭제를 지원합니다.
+* h2 database musinsa table
+* <img width="785" alt="h2db_table_musinsa" src="https://github.com/user-attachments/assets/d31e8ceb-9a41-4752-ac96-ec8384c16354" />
 
 ## 구현된 기능
-구현 1) - 카테고리 별 최저가격 브랜드와 상품 가격, 총액을 조회하는 API
+### 구현 1) - 카테고리 별 최저가격 브랜드와 상품 가격, 총액을 조회하는 API
 * 요청값 : 없음
 * 응답값 : Frontend에서 값 변경없이 아래와 같은 화면을 출력하기 위한 JSON
+* 
+* 테스트 : Postman GET http://localhost:8080/api/musinsa/minprices
 
-<img width="349" alt="구현1출력" src="https://github.com/user-attachments/assets/35ed8cc1-ed33-43e0-a63b-52474b67f719" />
+### 구현 2) - 단일 브랜드로 모든 카테고리 상품을 구매할 때 최저가격에 판매하는 브랜드와 카테고리의 상품가격, 총액을 조회하는 API
+* 테스트 : Postman GET http://localhost:8080/api/musinsa/minpricebrand
 
-구현 2) - 단일 브랜드로 모든 카테고리 상품을 구매할 때 최저가격에 판매하는 브랜드와 카테고리의 상품가격, 총액을
-조회하는 API
-
-구현 3) - 카테고리 이름으로 최저, 최고 가격 브랜드와 상품 가격을 조회하는 API
+### 구현 3) - 카테고리 이름으로 최저, 최고 가격 브랜드와 상품 가격을 조회하는 API
 * 요청값 : 카테고리명 (String)
-* 응답값
+* 응답값 
+* 테스트 : http://localhost:8080/api/musinsa/minMaxPrice/상의 
 
-구현 4) 브랜드 및 상품을 추가 / 업데이트 / 삭제하는 API
-요청값- Request Body JSON
+### 구현 4) 브랜드 및 상품을 추가 / 업데이트 / 삭제하는 API
+* 요청값- Request Body JSON
 * 응답값
 * 성공 혹은 실패 여부 JSON
 * API 실패 시, 실패값과 실패 사유를 전달해야 합니다.
+#### 상품생성
+* 테스트 : Postman POST http://localhost:8080/api/musinsa
+* 입력데이터 :
+{
+    "brand":"J", 
+    "tops": 20123,
+    "outer":30123 , 
+    "pants": 40123, 
+    "sneakers": 50123, 
+    "bag":60123, 
+    "cap":70123, 
+    "socks":80123, 
+    "accessory":90123
+}
 
 이 API는 다음 기능을 포함합니다.
 
