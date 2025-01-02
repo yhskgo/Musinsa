@@ -1,0 +1,5 @@
+com/musinsa/entity/Musinsa.class
+com/musinsa/controller/MusinsaController.class
+com/musinsa/service/MusinsaService.class
+com/musinsa/repository/MusinsaRepository.class
+com/musinsa/MusinsaExamApplication.class
